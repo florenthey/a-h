@@ -1,9 +1,11 @@
 import React from "react";
+import Meta from "../../components/core/meta/Meta";
 import GlobalLink from "../../components/button/GlobalLink";
 
 export default function Atelier() {
   return (
     <div>
+      <Meta typeMeta={"studio"} />
       <GlobalLink typeLink={"return"} />
       <h1>Atelier</h1>
       <p>

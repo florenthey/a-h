@@ -2,17 +2,18 @@ import React from "react";
 import Link from "next/link";
 import { types } from "../../services/Links";
 
-import { StyledLink } from "./GlobalLink.style";
+import { ButtonLink, StyledLink } from "./GlobalLink.style";
 
 export default function GlobalLink({ typeLink }) {
   return types.map((type, i) => {
     if (typeLink === type.typeLinkValue) {
+      const { path, value } = type;
       return (
-        <div key={i}>
-          <Link href={type.path}>
-            <StyledLink>{type.value}</StyledLink>
+        <ButtonLink key={i}>
+          <Link href={path}>
+            <StyledLink>{value}</StyledLink>
           </Link>
-        </div>
+        </ButtonLink>
       );
     }
   });

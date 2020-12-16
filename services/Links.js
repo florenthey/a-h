@@ -1,23 +1,23 @@
 export const types = [
   {
     typeLinkValue: "studio",
-    value: "L'atelier",
+    value: "L'ATELIER",
     path: "/atelier",
   },
-  { typeLinkValue: "contact", value: "Nous contacter", path: "/contact" },
+  { typeLinkValue: "contact", value: "NOUS CONTACTER", path: "/contact" },
   {
     typeLinkValue: "creations",
-    value: "Voir nos créations",
+    value: "VOIR NOS CRÉATIONS",
     path: "/creations",
   },
   {
     typeLinkValue: "services",
-    value: "Voir nos prestations",
+    value: "VOIR NOS PRESTATIONS",
     path: "/prestations",
   },
   {
     typeLinkValue: "return",
-    value: "Retour à l'accueil",
+    value: "RETOUR À L'ACCUEIL",
     path: "/",
   },
 ];

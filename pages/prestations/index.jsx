@@ -1,9 +1,11 @@
 import React from "react";
 import GlobalLink from "../../components/button/GlobalLink";
+import Meta from "../../components/core/meta/Meta";
 
 export default function Prestation() {
   return (
     <div>
+      <Meta typeMeta={"services"} />
       <GlobalLink typeLink={"return"} />
       <h1>Prestations</h1>
       <p>
