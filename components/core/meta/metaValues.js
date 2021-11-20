@@ -18,14 +18,14 @@ export const metas = [
       "Informations de contact et formulaire pour devis des artisans de l'Atelier Heyraud",
   },
   {
-    typeMetaValue: "creations",
-    name: "Atelier Heyraud - Créations",
+    typeMetaValue: "creation",
+    name: "Atelier Heyraud - Création",
     description:
       "Une Galerie photos d'un panel de créations réalisées par les artisans de l'Atelier Heyraud",
   },
   {
-    typeMetaValue: "services",
-    name: "Atelier Heyraud - Prestations",
+    typeMetaValue: "service",
+    name: "Atelier Heyraud - Prestation",
     description:
       "Les différentes prestations proposées par les artisans de l'Atelier Heyraud",
   },

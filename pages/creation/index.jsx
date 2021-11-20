@@ -1,6 +1,6 @@
 import React from "react";
-import GlobalLink from "../../components/button/GlobalLink";
-import Meta from "../../components/core/meta/Meta";
+import GlobalLink from "@components/button/GlobalLink";
+import Meta from "@components/core/meta/Meta";
 
 const creationData = {
   meta: "creation",
