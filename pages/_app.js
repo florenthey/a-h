@@ -1,15 +1,11 @@
-import { ThemeProvider } from "styled-components";
-import { theme, GlobalStyle } from "./styles/Theme";
-import Navbar from "../components/core/navbar/Navbar";
+import Layout from "@components/core/layout/Layout";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Navbar />
+      <Layout>
         <Component {...pageProps} />
-      </ThemeProvider>
+      </Layout>
     </>
   );
 }
