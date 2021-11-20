@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { List } from "./Navbar.style";
-import Hamburger from "../../icons/Hamburger";
 import { links } from "../../utils/links";
+import Hamburger from "../../icons/Hamburger";
 
 export default function Navbar() {
   return (
