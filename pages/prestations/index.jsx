@@ -5,8 +5,8 @@ import Meta from "../../components/core/meta/Meta";
 export default function Prestation() {
   return (
     <div>
-      <Meta typeMeta={"services"} />
-      <GlobalLink typeLink={"return"} />
+      <Meta typeMeta="services" />
+      <GlobalLink typeLink="return" />
       <h1>Prestations</h1>
       <p>
         Une nouvelle cuisine? Un dressing et des rangements? Nous sommes à votre
@@ -25,7 +25,7 @@ export default function Prestation() {
         Divers: aménagements de boutiques, peintures intérieurs, peintures
         extérieures, peintures naturelles, placos …
       </p>
-      <GlobalLink typeLink={"contact"} />
+      <GlobalLink typeLink="contact" />
     </div>
   );
 }

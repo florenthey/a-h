@@ -5,8 +5,8 @@ import GlobalLink from "../../components/button/GlobalLink";
 export default function Contact() {
   return (
     <div>
-      <Meta typeMeta={"contact"} />
-      <GlobalLink typeLink={"return"} />
+      <Meta typeMeta="contact" />
+      <GlobalLink typeLink="return" />
       <h1>Contact</h1>
       <p>
         Vous avez des questions, des besoins ou des envies? Faites nous
@@ -15,8 +15,8 @@ export default function Contact() {
         soit directement par téléphone. Nous vous répondrons dans les plus brefs
         délais.
       </p>
-      <GlobalLink typeLink={"services"} />
-      <GlobalLink typeLink={"creations"} />
+      <GlobalLink typeLink="services" />
+      <GlobalLink typeLink="creations" />
     </div>
   );
 }

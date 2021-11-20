@@ -1,4 +1,4 @@
-export const types = [
+export const links = [
   {
     typeLinkValue: "studio",
     value: "L'ATELIER",

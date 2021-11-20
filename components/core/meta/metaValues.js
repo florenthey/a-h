@@ -3,7 +3,7 @@ export const metas = [
     typeMetaValue: "home",
     name: "Atelier Heyraud - Accueil",
     description:
-      "La présentation des artisans de l'Atelier Heyraud, de leur cursus, méthodologie et philosophie",
+      "Accueil du site web de l'Atelier Heyraud, artisans spécialisés en menuiserie, agencement et peinture",
   },
   {
     typeMetaValue: "studio",

@@ -4,7 +4,7 @@ import Meta from "../components/core/meta/Meta";
 export default function Home() {
   return (
     <div>
-      <Meta typeMeta={"home"} />
+      <Meta typeMeta="home" />
       <h1>Atelier Heyraud</h1>
       <h2>Menuiserie Agencement Peinture</h2>
       <GlobalLink typeLink={"creations"} />

@@ -5,8 +5,8 @@ import GlobalLink from "../../components/button/GlobalLink";
 export default function Atelier() {
   return (
     <div>
-      <Meta typeMeta={"studio"} />
-      <GlobalLink typeLink={"return"} />
+      <Meta typeMeta="studio" />
+      <GlobalLink typeLink="return" />
       <h1>Atelier</h1>
       <p>
         <span>Sylvain Heyraud</span>, artisan passionné, diplômé en menuiserie,
