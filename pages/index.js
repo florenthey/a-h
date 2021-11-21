@@ -1,5 +1,5 @@
-import GlobalLink from "../components/button/GlobalLink";
-import Meta from "../components/core/meta/Meta";
+import GlobalLink from "@components/button/GlobalLink";
+import Meta from "@components/core/meta/Meta";
 
 export default function Home() {
   return (

@@ -1,8 +1,8 @@
 import Head from "next/head";
-import { metas } from "./metaValues";
+import { metaValues } from "./metaValues";
 
 export default function Meta({ typeMeta }) {
-  return metas.map((meta) => {
+  return metaValues.map((meta) => {
     const { typeMetaValue, name, description } = meta;
 
     if (typeMeta === typeMetaValue) {

@@ -1,6 +1,6 @@
 export const subMenusCreationLinks = [
   {
-    typeLinkValue: "all-creation",
+    typeLinkValue: "creation",
     value: "Voir toute nos créations",
     path: "/creation",
   },
@@ -21,8 +21,8 @@ export const subMenusCreationLinks = [
   },
   {
     typeLinkValue: "exterior-layout",
-    value: "Aménagement extérieur",
-    path: "/creation/amenagement-exterieur",
+    value: "Agencement extérieur",
+    path: "/creation/agencement-exterieur",
   },
   {
     typeLinkValue: "store-layout",
