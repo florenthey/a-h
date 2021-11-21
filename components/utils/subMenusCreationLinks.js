@@ -1,4 +1,4 @@
-export const creationSectionsLinks = [
+export const subMenusCreationLinks = [
   {
     typeLinkValue: "all-creation",
     value: "Voir toute nos créations",
@@ -7,28 +7,36 @@ export const creationSectionsLinks = [
   {
     typeLinkValue: "interior-carpentry",
     value: "Menuiserie intérieure",
-    path: "/menuiserie-interieure",
+    path: "/creation/menuiserie-interieure",
   },
   {
     typeLinkValue: "exterior-carpentry",
     value: "Menuiserie extérieure",
-    path: "/menuiserie-exterieure",
+    path: "/creation/menuiserie-exterieure",
   },
   {
     typeLinkValue: "interior-layout",
     value: "Agencement intérieur",
-    path: "/agencement-interieur",
+    path: "/creation/agencement-interieur",
   },
   {
     typeLinkValue: "exterior-layout",
     value: "Aménagement extérieur",
-    path: "/amenagement-exterieur",
+    path: "/creation/amenagement-exterieur",
   },
   {
     typeLinkValue: "store-layout",
     value: "Agencement boutique",
-    path: "/agencement-boutique",
+    path: "/creation/agencement-boutique",
   },
-  { typeLinkValue: "theater-sets", value: "Peinture", path: "/peinture" },
-  { value: "Décors théâtre", path: "/decors-theatre" },
+  {
+    typeLinkValue: "paint",
+    value: "Peinture",
+    path: "/creation/peinture",
+  },
+  {
+    typeLinkValue: "theater-sets",
+    value: "Décors théâtre",
+    path: "/creation/decors-theatre",
+  },
 ];

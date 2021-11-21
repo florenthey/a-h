@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { navbarLinks } from "../../utils/navbarLinks";
-import { creationSectionsLinks } from "../../utils/creationSectionsLinks";
+import { subMenusCreationLinks } from "../../utils/subMenusCreationLinks";
 import HamburgerIcon from "../../icons/Hamburger";
 import CrossIcon from "../../icons/Cross";
 import useScreenSize from "@hooks/useScreenSize";
@@ -41,29 +41,14 @@ export default function Navbar() {
     />
   );
 
-  const subMenusCreation = (
-    <SubMenus>
-      {creationSectionsLinks?.map((section) => {
-        const { value, path } = section;
-        return (
-          <li key={value}>
-            <Link href={path}>
-              <a>{value}</a>
-            </Link>
-          </li>
-        );
-      })}
-    </SubMenus>
-  );
-
   const navbar = (
     <List>
       {navbarLinks.map((link) => {
         const { value, path } = link;
         return (
           <li key={value}>
-            <Link href={path}>
-              {value !== "CRÉATION" ? (
+            {value !== "CRÉATION" ? (
+              <Link href={path}>
                 <a
                   onClick={() => {
                     if (isNotDesktop) {
@@ -74,18 +59,33 @@ export default function Navbar() {
                 >
                   {value}
                 </a>
-              ) : (
-                <CreationLink
-                  onClick={() => setIsCreationClicked(!isCreationClicked)}
-                >
-                  {value}
-                </CreationLink>
-              )}
-            </Link>
+              </Link>
+            ) : (
+              <CreationLink
+                onClick={() => setIsCreationClicked(!isCreationClicked)}
+              >
+                {value}
+              </CreationLink>
+            )}
           </li>
         );
       })}
     </List>
+  );
+
+  const subMenusCreation = (
+    <SubMenus>
+      {subMenusCreationLinks?.map((section) => {
+        const { value, path } = section;
+        return (
+          <li key={value}>
+            <Link href={path}>
+              <a>{value}</a>
+            </Link>
+          </li>
+        );
+      })}
+    </SubMenus>
   );
 
   const iconConditionalDisplay =
