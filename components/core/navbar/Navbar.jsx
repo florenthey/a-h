@@ -26,7 +26,8 @@ export default function Navbar() {
       onClick={() => setIsClicked(true)}
     />
   );
-  const cross = isNotDesktop && isClicked && (
+
+  const cross = (
     <CrossIcon
       width={18}
       height={18}
@@ -38,6 +39,7 @@ export default function Navbar() {
       }}
     />
   );
+
   const navbar = (
     <List
       onClick={() => {
@@ -58,17 +60,17 @@ export default function Navbar() {
       })}
     </List>
   );
-  const displayer = () => {
-    if (isNotDesktop && isClicked === false) {
-      return hamburger;
-    }
-    return navbar;
-  };
+
+  const iconConditionalDisplay =
+    isNotDesktop && (isClicked ? cross : hamburger);
+
+  const navbarConditionalDisplay =
+    ((isNotDesktop && isClicked) || !isNotDesktop) && navbar;
 
   return (
     <Wrapper>
-      {cross}
-      {displayer()}
+      {iconConditionalDisplay}
+      {navbarConditionalDisplay}
     </Wrapper>
   );
 }
