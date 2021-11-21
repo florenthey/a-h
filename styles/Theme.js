@@ -12,4 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
   }   
+  ul {
+    list-style: none;
+  }
  `;

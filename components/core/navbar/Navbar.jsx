@@ -7,7 +7,7 @@ import CrossIcon from "../../icons/Cross";
 import useScreenSize from "@hooks/useScreenSize";
 import { screensizeInt } from "@utils/mediaQueriesBreakpoints";
 
-import { Wrapper, List, Creation } from "./navbar.style";
+import { Wrapper, List, CreationLink, SubMenus } from "./navbar.style";
 
 export default function Navbar() {
   const [isIconClicked, setisIconClicked] = useState(false);
@@ -15,16 +15,15 @@ export default function Navbar() {
   const isNotDesktop = useScreenSize().width <= screensizeInt.tablet;
 
   useEffect(() => {
-    if (isNotDesktop) {
-      setisIconClicked(false);
-    }
+    setisIconClicked(false);
+    setIsCreationClicked(false);
   }, [isNotDesktop]);
 
   const hamburger = (
     <HamburgerIcon
       width={25}
       height={25}
-      fillColor="whiteSmoke"
+      fillColor="black"
       onClick={() => setisIconClicked(true)}
     />
   );
@@ -33,8 +32,8 @@ export default function Navbar() {
     <CrossIcon
       width={18}
       height={18}
-      strokeColor="whiteSmoke"
-      fillColor="whiteSmoke"
+      strokeColor="black"
+      fillColor="black"
       strokeWidth={2.5}
       onClick={() => {
         setisIconClicked(false);
@@ -43,7 +42,7 @@ export default function Navbar() {
   );
 
   const subMenusCreation = (
-    <ul>
+    <SubMenus>
       {creationSectionsLinks?.map((section) => {
         const { value, path } = section;
         return (
@@ -54,17 +53,11 @@ export default function Navbar() {
           </li>
         );
       })}
-    </ul>
+    </SubMenus>
   );
 
   const navbar = (
-    <List
-    // onClick={() => {
-    //   if (isNotDesktop) {
-    //     setisIconClicked(false);
-    //   }
-    // }}
-    >
+    <List>
       {navbarLinks.map((link) => {
         const { value, path } = link;
         return (
@@ -82,11 +75,11 @@ export default function Navbar() {
                   {value}
                 </a>
               ) : (
-                <Creation
+                <CreationLink
                   onClick={() => setIsCreationClicked(!isCreationClicked)}
                 >
                   {value}
-                </Creation>
+                </CreationLink>
               )}
             </Link>
           </li>

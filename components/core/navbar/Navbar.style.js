@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { device } from "@utils/mediaQueriesBreakpoints";
 
 export const List = styled.ul`
-  list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   /* display: grid; */
   /* grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr; */
@@ -15,9 +15,11 @@ export const List = styled.ul`
 `;
 
 export const Wrapper = styled.div`
-  background: orange;
+  /* background: orange; */
 `;
 
-export const Creation = styled.p`
+export const CreationLink = styled.p`
   cursor: pointer;
 `;
+
+export const SubMenus = styled.ul``;
