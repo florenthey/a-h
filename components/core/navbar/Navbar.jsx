@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { links } from "../../utils/links";
 import HamburgerIcon from "../../icons/Hamburger";
@@ -11,6 +11,13 @@ import { Wrapper, List } from "./navbar.style";
 export default function Navbar() {
   const [isClicked, setIsClicked] = useState(false);
   const isNotDesktop = useScreenSize().width <= screensizeInt.tablet;
+
+  useEffect(() => {
+    if (isNotDesktop) {
+      setIsClicked(false);
+    }
+  }, [isNotDesktop]);
+
   const hamburger = (
     <HamburgerIcon
       width={25}
