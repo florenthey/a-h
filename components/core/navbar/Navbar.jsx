@@ -80,7 +80,7 @@ export default function Navbar() {
         return (
           <li key={value}>
             <Link href={path}>
-              <a>{value}</a>
+              <a onClick={() => setIsCreationClicked(false)}>{value}</a>
             </Link>
           </li>
         );
