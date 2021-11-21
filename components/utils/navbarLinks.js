@@ -1,4 +1,4 @@
-export const links = [
+export const navbarLinks = [
   {
     typeLinkValue: "return",
     value: "ACCUEIL",

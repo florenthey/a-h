@@ -17,3 +17,7 @@ export const List = styled.ul`
 export const Wrapper = styled.div`
   background: orange;
 `;
+
+export const Creation = styled.p`
+  cursor: pointer;
+`;

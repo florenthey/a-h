@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { links } from "../../utils/links";
+import { navbarLinks } from "../../utils/navbarLinks";
+import { creationSectionsLinks } from "../../utils/creationSectionsLinks";
 import HamburgerIcon from "../../icons/Hamburger";
 import CrossIcon from "../../icons/Cross";
 import useScreenSize from "@hooks/useScreenSize";
 import { screensizeInt } from "@utils/mediaQueriesBreakpoints";
 
-import { Wrapper, List } from "./navbar.style";
+import { Wrapper, List, Creation } from "./navbar.style";
 
 export default function Navbar() {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isIconClicked, setisIconClicked] = useState(false);
+  const [isCreationClicked, setIsCreationClicked] = useState(false);
   const isNotDesktop = useScreenSize().width <= screensizeInt.tablet;
 
   useEffect(() => {
     if (isNotDesktop) {
-      setIsClicked(false);
+      setisIconClicked(false);
     }
   }, [isNotDesktop]);
 
@@ -23,7 +25,7 @@ export default function Navbar() {
       width={25}
       height={25}
       fillColor="whiteSmoke"
-      onClick={() => setIsClicked(true)}
+      onClick={() => setisIconClicked(true)}
     />
   );
 
@@ -35,21 +37,15 @@ export default function Navbar() {
       fillColor="whiteSmoke"
       strokeWidth={2.5}
       onClick={() => {
-        setIsClicked(false);
+        setisIconClicked(false);
       }}
     />
   );
 
-  const navbar = (
-    <List
-      onClick={() => {
-        if (isNotDesktop) {
-          setIsClicked(false);
-        }
-      }}
-    >
-      {links.map((link) => {
-        const { value, path } = link;
+  const subMenusCreation = (
+    <ul>
+      {creationSectionsLinks?.map((section) => {
+        const { value, path } = section;
         return (
           <li key={value}>
             <Link href={path}>
@@ -58,19 +54,61 @@ export default function Navbar() {
           </li>
         );
       })}
+    </ul>
+  );
+
+  const navbar = (
+    <List
+    // onClick={() => {
+    //   if (isNotDesktop) {
+    //     setisIconClicked(false);
+    //   }
+    // }}
+    >
+      {navbarLinks.map((link) => {
+        const { value, path } = link;
+        return (
+          <li key={value}>
+            <Link href={path}>
+              {value !== "CRÉATION" ? (
+                <a
+                  onClick={() => {
+                    if (isNotDesktop) {
+                      setisIconClicked(false);
+                    }
+                    setIsCreationClicked(false);
+                  }}
+                >
+                  {value}
+                </a>
+              ) : (
+                <Creation
+                  onClick={() => setIsCreationClicked(!isCreationClicked)}
+                >
+                  {value}
+                </Creation>
+              )}
+            </Link>
+          </li>
+        );
+      })}
     </List>
   );
 
   const iconConditionalDisplay =
-    isNotDesktop && (isClicked ? cross : hamburger);
+    isNotDesktop && (isIconClicked ? cross : hamburger);
 
   const navbarConditionalDisplay =
-    ((isNotDesktop && isClicked) || !isNotDesktop) && navbar;
+    ((isNotDesktop && isIconClicked) || !isNotDesktop) && navbar;
+
+  const subMenusCreationConditionalDisplay =
+    isCreationClicked && subMenusCreation;
 
   return (
     <Wrapper>
       {iconConditionalDisplay}
       {navbarConditionalDisplay}
+      {subMenusCreationConditionalDisplay}
     </Wrapper>
   );
 }
