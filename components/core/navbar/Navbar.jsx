@@ -7,7 +7,7 @@ import CrossIcon from "../../icons/Cross";
 import useScreenSize from "@hooks/useScreenSize";
 import { screensizeInt } from "@utils/mediaQueriesBreakpoints";
 
-import { Wrapper, List, CreationLink, SubMenus } from "./navbar.style";
+import { Wrapper, NavbarLinks, CreationLink, SubMenus } from "./navbar.style";
 
 export default function Navbar() {
   const [isIconClicked, setisIconClicked] = useState(false);
@@ -42,7 +42,7 @@ export default function Navbar() {
   );
 
   const navbar = (
-    <List>
+    <NavbarLinks>
       {navbarLinks.map((link) => {
         const { value, path } = link;
         return (
@@ -70,7 +70,7 @@ export default function Navbar() {
           </li>
         );
       })}
-    </List>
+    </NavbarLinks>
   );
 
   const subMenusCreation = (

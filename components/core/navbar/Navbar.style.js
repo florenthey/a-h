@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { device } from "@utils/mediaQueriesBreakpoints";
 
-export const List = styled.ul`
+export const NavbarLinks = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;

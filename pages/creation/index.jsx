@@ -1,6 +1,7 @@
 import React from "react";
 import GlobalLink from "@components/button/GlobalLink";
 import Meta from "@components/core/meta/Meta";
+import Galleries from "@components/core/gallery/Galleries";
 
 const creationData = {
   meta: "creation",
@@ -15,6 +16,7 @@ export default function Creation() {
       <GlobalLink typeLink="return" />
       <h1>{title}</h1>
       <p>{text}</p>
+      <Galleries />
       <GlobalLink typeLink="contact" />
     </div>
   );
