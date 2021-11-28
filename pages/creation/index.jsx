@@ -8,6 +8,7 @@ const creationData = {
   title: "Créations",
   text: "Découvrez ici ce qui fait le bonheur de nos clients.",
 };
+
 export default function Creation() {
   const { meta, title, text } = creationData;
   return (
