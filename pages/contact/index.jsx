@@ -1,6 +1,7 @@
 import React from "react";
 import Meta from "@components/core/meta/Meta";
 import GlobalLink from "@components/button/GlobalLink";
+import { useForm } from "react-hook-form";
 
 const contactData = {
   meta: "contact",
@@ -9,6 +10,8 @@ const contactData = {
 };
 export default function Contact() {
   const { meta, title, text } = contactData;
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => console.log(data);
 
   return (
     <div>
@@ -16,6 +19,37 @@ export default function Contact() {
       <GlobalLink typeLink="return" />
       <h1>{title}</h1>
       <p>{text}</p>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <select name="client-type" {...register("client-type")}>
+          <option value="">Vous êtes:</option>
+          <option value="particular">Particulié</option>
+          <option value="professional">Professionel</option>
+        </select>
+        <input
+          type="text"
+          name="firstname"
+          placeholder="Nom"
+          {...register("firstname")}
+        ></input>
+        <input
+          type="text"
+          name="lastname"
+          placeholder="Prénom"
+          {...register("lastname")}
+        ></input>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          {...register("email")}
+        ></input>
+        <textArea
+          name="message"
+          placeholder="Message"
+          {...register("message")}
+        ></textArea>
+        <button type="submit">Envoyer</button>
+      </form>
       <GlobalLink typeLink="services" />
       <GlobalLink typeLink="creations" />
     </div>
