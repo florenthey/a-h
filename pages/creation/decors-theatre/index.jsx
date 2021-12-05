@@ -9,6 +9,7 @@ export default function DecorsTheatre() {
   return (
     <div>
       <Meta typeMeta={meta} />
+      <h1>Création</h1>
     </div>
   );
 }

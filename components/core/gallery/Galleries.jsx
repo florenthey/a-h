@@ -1,10 +1,12 @@
 import React from "react";
-import Gallery from "./Gallery";
+import Gallery from "./gallery/Gallery";
 import { galleries } from "./utils/galleries";
 
 export default function Galleries() {
   const gallery = galleries.map((gallery) => {
-    return <Gallery gallery={gallery} />;
+    const { content } = gallery;
+
+    return <Gallery gallery={content} />;
   });
-  return <div>{gallery}</div>;
+  return <>{gallery}</>;
 }
