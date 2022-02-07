@@ -7,8 +7,8 @@ export default function Home() {
       <Meta typeMeta="home" />
       <h1>Atelier Heyraud</h1>
       <h2>Menuiserie Agencement Peinture</h2>
-      <GlobalLink typeLink={"creations"} />
-      <GlobalLink typeLink={"contact"} />
+      <GlobalLink typeLink="creations" />
+      <GlobalLink typeLink="contact" />
     </div>
   );
 }

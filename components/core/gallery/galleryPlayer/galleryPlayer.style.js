@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  max-height: 300px;
+`;
+
 export const Overlay = styled.div`
   position: fixed;
   width: 100%;
@@ -19,6 +26,7 @@ export const Wrapper = styled.div`
 
 export const Navigation = styled.div`
   display: flex;
+  justify-content: center;
 `;
 
 export const ImageNumber = styled.p`

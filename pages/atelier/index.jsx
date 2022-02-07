@@ -54,8 +54,8 @@ export default function Atelier() {
       {introEdwige}
       {experienceText}
       {text}
-      <GlobalLink typeLink={"creations"} />
-      <GlobalLink typeLink={"contact"} />
+      <GlobalLink typeLink="creations" />
+      <GlobalLink typeLink="contact" />
     </div>
   );
 }

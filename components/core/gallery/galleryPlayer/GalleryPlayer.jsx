@@ -4,6 +4,7 @@ import { galleries } from "../utils/galleries";
 import CrossIcon from "@components/icons/Cross";
 
 import {
+  Container,
   Overlay,
   Wrapper,
   Navigation,
@@ -45,33 +46,25 @@ export default function GalleryPlayer() {
   };
 
   const displayPicture = () => {
-    const { path, description, width, height } = gallery[currentIndex];
-    return (
-      <Picture
-        path={path}
-        description={description}
-        width={width}
-        height={height}
-      />
-    );
+    const { path, description } = gallery[currentIndex];
+    return <Picture path={path} description={description} />;
   };
   return (
-    <>
+    <Container>
       <Overlay onClick={() => setGalleryPlayer(null)} />
       <Wrapper>
+        <CrossIcon
+          width={18}
+          height={18}
+          strokeColor="whiteSmoke"
+          fillColor="whiteSmoke"
+          strokeWidth={2.5}
+          onClick={() => {
+            setGalleryPlayer(null);
+          }}
+        />
         {currentIndex !== null && displayPicture()}
         <Navigation>
-          <CrossIcon
-            width={18}
-            height={18}
-            strokeColor="whiteSmoke"
-            fillColor="whiteSmoke"
-            strokeWidth={2.5}
-            onClick={() => {
-              setGalleryPlayer(null);
-            }}
-          />
-
           <button value="previous" onClick={(event) => navigation(event)}>
             prev
           </button>
@@ -83,6 +76,6 @@ export default function GalleryPlayer() {
           </ImageNumber>
         </Navigation>
       </Wrapper>
-    </>
+    </Container>
   );
 }

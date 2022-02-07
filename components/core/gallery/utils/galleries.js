@@ -110,7 +110,39 @@ export const interiorCarpentry = [
   },
 ];
 
+export const exteriorCarpentry = [
+  {
+    type: "exteriorCarpentry",
+    path: "/images/menuiserie-exterieure/menuiserie-exterieure-paravent-01.jpg",
+    description: "Paravent",
+    width: "300",
+    height: "215",
+  },
+  {
+    type: "exteriorCarpentry",
+    path: "/images/menuiserie-exterieure/menuiserie-exterieure-portes-01.jpg",
+    description: "Portes",
+    width: "300",
+    height: "215",
+  },
+  {
+    type: "exteriorCarpentry",
+    path: "/images/menuiserie-exterieure/menuiserie-exterieure-porte-01.jpg",
+    description: "Porte",
+    width: "300",
+    height: "215",
+  },
+  {
+    type: "exteriorCarpentry",
+    path: "/images/menuiserie-exterieure/menuiserie-exterieure-volets-01.jpg",
+    description: "Volets",
+    width: "300",
+    height: "215",
+  },
+];
+
 export const galleries = [
   { type: "interiorCarpentry", content: interiorCarpentry },
   { type: "storeLayout", content: storeLayout },
+  { type: "exteriorCarpentry", content: exteriorCarpentry },
 ];
