@@ -5,10 +5,9 @@ export const NavigationWrapper = styled.div`
   justify-content: space-between;
   position: absolute;
   top: 750px;
-  z-index: 99999;
+  z-index: 3;
   width: 100%;
   background: black;
-  overflow: hidden;
 `;
 
 export const ImageNumber = styled.p`
