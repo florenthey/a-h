@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import { navbarLinks } from "../../utils/navbarLinks";
 import { subMenusCreationLinks } from "../../utils/subMenusCreationLinks";
@@ -7,7 +8,13 @@ import CrossIcon from "../../icons/Cross";
 import useScreenSize from "@hooks/useScreenSize";
 import { screensizeInt } from "@utils/mediaQueriesBreakpoints";
 
-import { Wrapper, NavbarLinks, CreationLink, SubMenus } from "./navbar.style";
+import {
+  Wrapper,
+  NavbarLinks,
+  CreationLink,
+  SubMenus,
+  A,
+} from "./navbar.style";
 
 export default function Navbar() {
   const [isIconClicked, setisIconClicked] = useState(false);
@@ -48,8 +55,8 @@ export default function Navbar() {
         return (
           <li key={value}>
             {value !== "CRÉATION" ? (
-              <Link href={path}>
-                <a
+              <Link href={path} passHref>
+                <A
                   onClick={() => {
                     if (isNotDesktop) {
                       setisIconClicked(false);
@@ -58,7 +65,7 @@ export default function Navbar() {
                   }}
                 >
                   {value}
-                </a>
+                </A>
               </Link>
             ) : (
               <CreationLink
@@ -79,8 +86,8 @@ export default function Navbar() {
         const { value, path } = section;
         return (
           <li key={value}>
-            <Link href={path}>
-              <a onClick={() => setIsCreationClicked(false)}>{value}</a>
+            <Link href={path} passHref>
+              <A onClick={() => setIsCreationClicked(false)}>{value}</A>
             </Link>
           </li>
         );
@@ -99,6 +106,14 @@ export default function Navbar() {
 
   return (
     <Wrapper>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       {iconConditionalDisplay}
       {navbarConditionalDisplay}
       {subMenusCreationConditionalDisplay}

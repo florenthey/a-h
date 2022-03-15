@@ -6,10 +6,11 @@ import { Wrapper } from "./gallery.style";
 export default function Gallery({ gallery }) {
   const { setGalleryPlayer } = useGalleryPlayer();
 
-  const galery = gallery.map((picture) => {
+  const galery = gallery.map((picture, index) => {
     const { path, description, width, height } = picture;
     return (
       <Wrapper
+        key={index}
         onClick={() => {
           setGalleryPlayer(picture);
         }}

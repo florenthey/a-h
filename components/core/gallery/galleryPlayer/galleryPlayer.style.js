@@ -3,8 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   max-width: 1200px;
-  max-height: 300px;
+  top: 150px;
+  max-height: 900px;
 `;
 
 export const Overlay = styled.div`
@@ -20,15 +22,10 @@ export const Overlay = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  position: absolute;
   z-index: 2;
-`;
-
-export const Navigation = styled.div`
   display: flex;
-  justify-content: center;
-`;
-
-export const ImageNumber = styled.p`
-  color: whiteSmoke;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
 `;
