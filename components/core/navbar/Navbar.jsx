@@ -3,10 +3,11 @@ import Head from "next/head";
 import Link from "next/link";
 import { navbarLinks } from "../../utils/navbarLinks";
 import { subMenusCreationLinks } from "../../utils/subMenusCreationLinks";
-import HamburgerIcon from "../../icons/Hamburger";
-import CrossIcon from "../../icons/Cross";
+import HamburgerIcon2 from "@components/icons/HamburgerIcon2";
+
 import useScreenSize from "@hooks/useScreenSize";
 import { screensizeInt } from "@utils/mediaQueriesBreakpoints";
+import CrossIcon2 from "@components/icons/CrossIcon2";
 
 import {
   Wrapper,
@@ -19,6 +20,7 @@ import {
 export default function Navbar() {
   const [isIconClicked, setisIconClicked] = useState(false);
   const [isCreationClicked, setIsCreationClicked] = useState(false);
+  const [eventType, setEventType] = useState(null);
   const isNotDesktop = useScreenSize().width <= screensizeInt.tablet;
 
   useEffect(() => {
@@ -27,26 +29,27 @@ export default function Navbar() {
   }, [isNotDesktop]);
 
   const hamburger = (
-    <HamburgerIcon
-      width={25}
-      height={25}
-      fillColor="black"
+    <HamburgerIcon2
+      style={{ position: "sticky", top: "10px", left: "10px" }}
       onClick={() => setisIconClicked(true)}
     />
   );
 
   const cross = (
-    <CrossIcon
-      width={18}
-      height={18}
-      strokeColor="black"
-      fillColor="black"
-      strokeWidth={2.5}
+    <CrossIcon2
+      style={{ position: "sticky", top: "10px", left: "10px" }}
       onClick={() => {
         setisIconClicked(false);
       }}
+      stroke="black"
     />
   );
+
+  // submenus display on hover for desktop
+  // const handleMouseEvent = (e) => {
+  //   e.persist();
+  //   setIsCreationClicked(!isCreationClicked);
+  // };
 
   const navbar = (
     <NavbarLinks>
@@ -70,6 +73,8 @@ export default function Navbar() {
             ) : (
               <CreationLink
                 onClick={() => setIsCreationClicked(!isCreationClicked)}
+                // onMouseOver={handleMouseEvent}
+                // onMouseLeave={handleMouseEvent}
               >
                 {value}
               </CreationLink>

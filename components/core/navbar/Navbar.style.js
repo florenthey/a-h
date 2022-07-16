@@ -6,18 +6,23 @@ export const NavbarLinks = styled.ul`
   justify-content: space-between;
   align-items: center;
   font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
 
-  /* display: grid; */
   /* grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr; */
   @media ${device.tablet} {
     flex-direction: column;
     gap: 40px;
+    border-bottom: none;
   }
 `;
 
 export const Wrapper = styled.div`
   /* background: orange; */
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20px;
 `;
 
 export const CreationLink = styled.li`
@@ -25,7 +30,13 @@ export const CreationLink = styled.li`
 `;
 
 export const SubMenus = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   font-family: "Raleway", sans-serif;
+  position: absolute;
+  right: 18.5%;
+  top: 4%;
 `;
 
 export const A = styled.a`

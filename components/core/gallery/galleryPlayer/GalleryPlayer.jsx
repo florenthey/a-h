@@ -8,9 +8,8 @@ import { Container, Overlay, Wrapper } from "./galleryPlayer.style";
 import Picture from "../Picture";
 import Navigation from "./components/navigation/Navigation";
 import { Button } from "@styles/Global";
-import useScreenSize from "@hooks/useScreenSize";
 
-export default function GalleryPlayer() {
+export default function GalleryPlayer({ height }) {
   const { galleryPlayer, setGalleryPlayer } = useGalleryPlayer();
   const [currentIndex, setCurrentIndex] = useState(null);
 
@@ -27,17 +26,9 @@ export default function GalleryPlayer() {
     return <Picture path={path} description={description} />;
   };
 
-  // De la merde, fonctionne pas
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-
   return (
-    <Container>
-      <Overlay
-        onClick={() => setGalleryPlayer(null)}
-        width={`${width}px`}
-        height={`${height}px`}
-      />
+    <Container height={height}>
+      <Overlay onClick={() => setGalleryPlayer(null)} height={height} />
       <Wrapper>
         <Button>
           <CrossIcon2
@@ -45,6 +36,7 @@ export default function GalleryPlayer() {
             onClick={() => {
               setGalleryPlayer(null);
             }}
+            stroke="white"
           />
         </Button>
         {currentIndex !== null && displayPicture()}

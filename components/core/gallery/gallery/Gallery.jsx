@@ -1,7 +1,7 @@
 import React from "react";
 import Picture from "../Picture";
 import { useGalleryPlayer } from "@context/useGalleryPlayer";
-import { Wrapper } from "./gallery.style";
+import { Wrapper, GaleryWrapper } from "./gallery.style";
 
 export default function Gallery({ gallery }) {
   const { setGalleryPlayer } = useGalleryPlayer();
@@ -24,5 +24,5 @@ export default function Gallery({ gallery }) {
       </Wrapper>
     );
   });
-  return <div>{galery}</div>;
+  return <GaleryWrapper>{galery}</GaleryWrapper>;
 }

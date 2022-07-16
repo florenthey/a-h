@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const SvgComponent = ({ style, onClick, stroke }, props) => (
+const SvgComponent = ({ style, onClick }, props) => (
   <svg
     style={style}
     onClick={onClick}
@@ -14,8 +14,8 @@ const SvgComponent = ({ style, onClick, stroke }, props) => (
       strokeLinejoin="round"
       strokeLinecap="round"
       strokeMiterlimit={10}
-      stroke={stroke}
-      d="m2 2 20 20M22 2 2 22"
+      stroke="#221b38"
+      d="M3 18h18M3 12h18M3 6h18"
     />
   </svg>
 );
