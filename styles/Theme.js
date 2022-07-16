@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const theme = {
-  maxWidth: "1200px",
+  maxWidth: "2000px",
 };
 
 export const GlobalStyle = createGlobalStyle`

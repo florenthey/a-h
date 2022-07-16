@@ -1,7 +1,6 @@
 import React from "react";
 import Meta from "@components/core/meta/Meta";
 import GlobalLink from "@components/button/GlobalLink";
-import { Inner } from "@styles/Global";
 
 const studioData = {
   meta: "studio",
@@ -47,7 +46,7 @@ export default function Atelier() {
     studioData;
 
   return (
-    <Inner>
+    <>
       <Meta typeMeta={meta} />
       <GlobalLink typeLink="return" />
       <h1>{title}</h1>
@@ -57,6 +56,6 @@ export default function Atelier() {
       {text}
       <GlobalLink typeLink="creations" />
       <GlobalLink typeLink="contact" />
-    </Inner>
+    </>
   );
 }

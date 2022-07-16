@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const ButtonLink = styled.div`
   text-align: center;
-
   border: 1px solid black;
-  border-radius: 4px;
+  border-radius: 2px;
   padding: 0.7em 0.6em;
-  width: 250px;
+  width: 200px;
 `;
 
 export const StyledLink = styled.a`

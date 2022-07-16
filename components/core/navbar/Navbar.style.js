@@ -16,11 +16,11 @@ export const NavbarLinks = styled.ul`
     flex-direction: column;
     gap: 40px;
     border-bottom: none;
+    padding-bottom: 25px;
   }
 `;
 
 export const Wrapper = styled.div`
-  /* background: orange; */
   border-bottom: 1px solid #e5e5e5;
   padding: 20px;
 `;

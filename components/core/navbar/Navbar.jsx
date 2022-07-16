@@ -37,7 +37,11 @@ export default function Navbar() {
 
   const cross = (
     <CrossIcon2
-      style={{ position: "sticky", top: "10px", left: "10px" }}
+      style={{
+        position: "sticky",
+        top: "10px",
+        left: "10px",
+      }}
       onClick={() => {
         setisIconClicked(false);
       }}
